@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+            <meta charset="UTF-8">
+            <title>Chat for the funcionario</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+            crossorigin="anonymous">
+    
+            <style>
+                form {
+                    padding: 30px;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    padding-right: 50px;
+                }
+
+                #messages {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                widows: 100%;
+            }
+
+            #messeges li {
+                padding: 5px 10px;
+            }
+            #messages li:nth-child(even){
+                color: white;
+                background: gray;
+            }
+            </style>
+        </head>
+        <body>
+            
+            <!---->
+            <div class="container-fluid">
+                <div class="row"></div>
+                    <!--for the ms every ms is s li-->
+                    <ul id="messages">
+    
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form id="message-form" action="">
+                            <div class="input-group">
+                                <input id="m" autocomplete="off" type="text" class="form-control" placeholder="Message...."
+                                aria-label="Message...."> 
+                                <span class="input-group-btn">
+                                    <button class="btn-sucess" type="submit">Send it</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+        crossorigin="anonymous"></script>
+    
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            const room = 'funcionario';
+            const socket = io.connect("/tech");
+    
+            //fetch the ms from the form
+            $('form').submit(()=>{
+                let ms = $('#m').val();
+                socket.emit('message', {ms, room});
+                $('#m').val('');
+                return false;
+            });
+    
+            socket.on('connect',()=>{
+                socket.emit('join',{room: room});
+            });
+    
+            socket.on('message', (ms)=>{
+                $('#messages').append($('<li>').text(ms));
+            });
+    
+            
+        </script>
+        </body>
+    </html>

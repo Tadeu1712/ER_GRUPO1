@@ -1,0 +1,212 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../img/download.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 657px;
+  background-attachment: fixed;
+}
+
+
+/*cenas da barra de cima*/
+
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding-top:4px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  border: 1px solid white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.main-nav{
+  float: right;
+  list-style: none;
+  margin-top:40px;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav li a{
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+
+
+.main-nav li a:hover{
+  border: 1px solid white;
+}
+
+.logo img{
+  width: 150px;
+  height: auto;
+  float: left;
+  margin: 10px;
+}
+
+.row{
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*====================*/
+
+.login-page{
+  width: 360px;
+  padding: 10% 0 0;
+  margin: auto;
+}
+
+.form{
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 88, 92, 0.8);
+  max-width: 400px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input{
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline-color: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form button:hover,.form button:active{
+  background: #43a047;
+}
+
+.form .message{
+  margin: 15px;
+  color: aliceblue;
+  font-size: 12px;
+}
+
+.form .message a{
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.form .register-form{
+  display: none;
+}
+
+.usernameRegist label{
+  position: relative;
+  float: left;
+  top: 20px;
+}
+
+.usernameRegist input{
+  float: right;
+}
+
+/* LOGIN */
+/*select da categoria no registo*/
+.appearance-select{
+   -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
+   -moz-appearance: none; /* Remove estilo padrão do FireFox */
+   appearance: none; /* Remove estilo padrão do FireFox*/
+   background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */
+   background-position: 218px center;  /*Posição da imagem do background*/
+   width: 250px; /* Tamanho do select, maior que o tamanho da div "div-select" */
+   height:30px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+   border:1px solid #ddd;
+   margin: 20px;
+}
+
+.hideForm{
+  display: none;
+}
+
+/* PROFISSIONAIS */
+.selectCatProf{
+  -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
+  -moz-appearance: none; /* Remove estilo padrão do FireFox */
+  appearance: none; /* Remove estilo padrão do FireFox*/
+  background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */
+  background-position: right;  /*Posição da imagem do background*/
+  width: 90%; /* Tamanho do select, maior que o tamanho da div "div-select" */
+  height:30px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+  border:1px solid #ddd;
+  margin: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700px;
+}
+
+.hideProfs{
+  display: none;
+}
+
+.hideProfs option{
+  font-weight: normal;
+}
+
+.carpinteiros{
+  width: 90%;
+  background: white;
+  height: 1000px;
+  margin-left: 20px;
+}

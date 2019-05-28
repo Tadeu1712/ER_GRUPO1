@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Pedidos</title>
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+        form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+ textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* To give the same size to all text fields */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+}
+
+input, textarea{
+  font-family: "Roboto", sans-serif;
+  outline: 1;
+  background: #f2f2f2;
+  width: 400px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+.button{
+  margin-left: 602px;
+  margin-top: 15px;
+}
+
+.button button{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline-color: 0;
+  background: #4caf50;
+  width: 100%
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+.button button:hover, .button button:active{
+  background: #43a047;
+}
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+
+      <div class="row">
+        <div class="logo">
+          <a href="home.html"> <img src="../img/logo.png"></a>
+        </div>
+
+        <ul class="main-nav">
+            <div class="dropdown">
+          <li onclick="myFunction()" class="dropbtn">PEDIDOS</li>
+          <div id="myDropdown" class="dropdown-content">
+              <a href="#">PUBLICO</a>
+              <a href="profissionais.html">DIRETO</a>
+          </div>
+            </div>
+
+          <li class=""> <a href="#">SOBRE</a> </li>
+          <li class=""> <a onclick="return PopComunication('http:/\/localhost:3000/')" href="#">CONTACTO</a> </li>
+          <li class=""> <a href="#">
+
+          </a> </li>
+        </ul>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br>
+      <div class="">
+
+        <form action="form" method="post" class="formPedido">
+            <div>
+
+              <input placeholder="Area" type="text" id="area" name="user_name">
+            </div>
+            <div>
+                <input placeholder="Morada" type="text" id="morada" name="morada">
+              </div>
+            <div>
+              <input placeholder="Data Início" type="text" id="dataIni" name="dataIni">
+            </div>
+              <div>
+                <input placeholder="Data Limite" type="email" id="dataLim" name="dataLim">
+              </div>
+            <div>
+              <textarea placeholder="Descrição" id="descricao" name="descricao"></textarea>
+            </div>
+          </form>
+          <div class="button">
+            <button>Efetuar Pedido</button>
+          </div>
+    </body>
+</html>
